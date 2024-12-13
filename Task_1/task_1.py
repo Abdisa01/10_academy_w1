@@ -140,7 +140,7 @@ plt.show()
 market_events = {
     pd.Timestamp('2020-05-01'): 'Market Rally',
     pd.Timestamp('2020-06-15'): 'Earnings Reports',
-    # Add more events as needed
+    # if there is more event we will add here
 }
 
 # Plot with annotations
