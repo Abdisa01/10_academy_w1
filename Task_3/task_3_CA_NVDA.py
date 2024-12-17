@@ -3,7 +3,7 @@ import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 # File paths
 news_file = '/content/drive/MyDrive/Colab Notebooks/GitHub/weak_1_data/raw_analyst_ratings.csv/raw_analyst_ratings.csv'
-stock_file = '/content/drive/MyDrive/Colab Notebooks/GitHub/weak_1_data/yfinance_data/yfinance_data/AAPL_historical_data.csv'
+stock_file = '/content/drive/MyDrive/Colab Notebooks/GitHub/weak_1_data/yfinance_data/yfinance_data/NVDA_historical_data.csv'
 
 # Initialize empty DataFrames
 news_list = []
@@ -58,7 +58,7 @@ stock_chunks = []
 
 # Load stock data in chunks
 stock_chunk_size = 1000
-for stock_chunk in pd.read_csv('/content/drive/MyDrive/Colab Notebooks/GitHub/weak_1_data/yfinance_data/yfinance_data/AAPL_historical_data.csv',
+for stock_chunk in pd.read_csv('/content/drive/MyDrive/Colab Notebooks/GitHub/weak_1_data/yfinance_data/yfinance_data/NVDA_historical_data.csv',
                                 chunksize=stock_chunk_size):
     # Convert Date column to datetime (MM/DD/YYYY format)
     stock_chunk['Date'] = pd.to_datetime(stock_chunk['Date'], format='%m/%d/%Y', errors='coerce')

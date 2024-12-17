@@ -58,7 +58,7 @@ stock_chunks = []
 
 # Load stock data in chunks
 stock_chunk_size = 1000
-for stock_chunk in pd.read_csv('/content/drive/MyDrive/Colab Notebooks/GitHub/weak_1_data/yfinance_data/yfinance_data/AAPL_historical_data.csv',
+for stock_chunk in pd.read_csv('/content/drive/MyDrive/Colab Notebooks/GitHub/weak_1_data/yfinance_data/yfinance_data/META_historical_data.csv',
                                 chunksize=stock_chunk_size):
     # Convert Date column to datetime (MM/DD/YYYY format)
     stock_chunk['Date'] = pd.to_datetime(stock_chunk['Date'], format='%m/%d/%Y', errors='coerce')
